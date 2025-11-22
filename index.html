@@ -1,0 +1,668 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sonic Balance - Precision neuroacoustic therapy using real-time HRV biofeedback for stress relief, chronic pain, and emotional balance. Yardley, PA.">
+    <title>Sonic Balance - Precision Sound Therapy for Neural Restoration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #2c5aa0 0%, #4a7bc8 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo-container {
+            max-width: 500px;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c5aa0 0%, #4a7bc8 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #2c5aa0;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Main Content Sections */
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        h2 {
+            color: #2c5aa0;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        
+        h3 {
+            color: #2c5aa0;
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        /* Alternate Background Sections */
+        .bg-light {
+            background: #f8f9fa;
+        }
+        
+        /* Who We Help Cards */
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .help-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .help-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .help-card h3 {
+            margin-top: 0;
+            color: #2c5aa0;
+        }
+        
+        /* How It Works Steps */
+        .steps {
+            display: grid;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background: #2c5aa0;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            margin-top: 0;
+        }
+        
+        /* Credentials List */
+        .credentials {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #2c5aa0;
+            margin: 2rem 0;
+        }
+        
+        .credentials ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .credentials li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .credentials li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #2c5aa0;
+            font-weight: bold;
+        }
+        
+        /* Pricing Cards */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #2c5aa0;
+            transform: scale(1.02);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            color: #2c5aa0;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .price-detail {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ Section */
+        .faq-item {
+            margin: 2rem 0;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            color: #2c5aa0;
+            font-weight: 600;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .submit-button {
+            background: #2c5aa0;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .submit-button:hover {
+            background: #4a7bc8;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        footer p {
+            margin: 0.5rem 0;
+        }
+        
+        .financial-assistance {
+            background: #f0f7ff;
+            border-left: 4px solid #2c5aa0;
+            padding: 1rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 5px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav {
+                margin-top: 1rem;
+            }
+            
+            nav a {
+                margin: 0 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 2rem 1rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .logo-container {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="SONIC_BALANCE1.png" alt="Sonic Balance System - Precision Sound Therapy for Neural Restoration and Coherence">
+            </div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Restore Your Nervous System. Reclaim Your Health.</h1>
+            <p>Personalized neuroacoustic therapy using real-time HRV biofeedback to identify and deliver your body's unique healing frequency.</p>
+            <a href="#contact" class="cta-button">Book Your Discovery Session</a>
+        </div>
+    </section>
+
+    <!-- What is Sonic Balance -->
+    <section id="about">
+        <h2>What is Sonic Balance?</h2>
+        <p>Sonic Balance™ is a revolutionary therapeutic system that combines cutting-edge heart rate variability (HRV) monitoring with precision vibroacoustic sound therapy. Unlike generic relaxation protocols, every session is personalized to YOUR nervous system's unique resonant frequency.</p>
+        
+        <p>Using advanced biofeedback technology and a custom-designed treatment table, we identify the exact frequency where your sympathetic (fight-or-flight) and parasympathetic (rest-and-digest) nervous systems achieve balance—your personal homeostasis point.</p>
+        
+        <p>Once identified, therapeutic sound and vibration are delivered directly through the body via specialized transducers positioned along acupuncture meridians. This creates a profound state of nervous system regulation that supports natural healing, stress reduction, and emotional balance.</p>
+        
+        <p><strong>The result:</strong> Deep physiological rest that allows your body to shift from survival mode to healing mode.</p>
+    </section>
+
+    <!-- Who We Help -->
+    <section class="bg-light">
+        <h2>Who We Help</h2>
+        <div class="help-grid">
+            <div class="help-card">
+                <h3>Stressed Executives</h3>
+                <p>Chronic workplace stress, burnout, sleep disruption, and performance anxiety. We help high-performers restore nervous system balance and regain mental clarity.</p>
+            </div>
+            
+            <div class="help-card">
+                <h3>Chronic Pain Sufferers</h3>
+                <p>When conventional treatments haven't worked, Sonic Balance addresses the nervous system dysregulation that often underlies persistent pain patterns.</p>
+            </div>
+            
+            <div class="help-card">
+                <h3>Emotional Imbalance</h3>
+                <p>Anxiety, depression, trauma response, and emotional overwhelm. Our approach helps reset the autonomic nervous system patterns that keep you stuck in fight-or-flight.</p>
+            </div>
+            
+            <div class="help-card">
+                <h3>Wellness Seekers</h3>
+                <p>Those already engaged in meditation, yoga, or mindfulness who want to deepen their practice with advanced nervous system regulation techniques.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Baseline Assessment</h3>
+                    <p>We measure your heart rate variability using medical-grade monitoring equipment to understand your current autonomic nervous system state.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Frequency Discovery</h3>
+                    <p>Using a systematic therapeutic sweep (50-200 Hz), we identify your unique homeostasis frequency—the point where your nervous system achieves optimal balance.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Personalized Treatment</h3>
+                    <p>Therapeutic sound and vibration are delivered at your identified frequency through our custom treatment table while we continue monitoring your real-time physiological response.</p>
+                </div>
+            </div>
+            
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h3>Integration & Follow-Up</h3>
+                    <p>Each session includes a detailed report of your nervous system patterns and a personalized protocol for ongoing support.</p>
+                </div>
+            </div>
+        </div>
+        
+        <p style="margin-top: 2rem;"><strong>Most clients experience noticeable shifts within 3-6 sessions as chronic stress patterns begin to release.</strong></p>
+    </section>
+
+    <!-- About -->
+    <section class="bg-light">
+        <h2>About Duane & Vonka</h2>
+        
+        <p><strong>Duane Chez</strong> is a musician-turned-healing practitioner who spent decades studying with pioneers in neuroacoustic therapy and consciousness research. After experiencing his own profound healing from chronic autonomic dysfunction, Duane dedicated himself to making advanced sound healing protocols accessible to others.</p>
+        
+        <p>His training includes work with:</p>
+        <ul style="margin-left: 2rem; margin-bottom: 1.5rem;">
+            <li>Dr. Jeffrey Thompson (Psychoacoustic protocols and neuroacoustic therapy)</li>
+            <li>Thomas Campbell (Monroe Institute consciousness research)</li>
+            <li>Barry Goldstein (Clinical sound healing applications)</li>
+            <li>John Stuart Reid (Cymatics and vibrational medicine)</li>
+            <li>David Gibson (Medical Sound Healers Association protocols)</li>
+        </ul>
+        
+        <div class="credentials">
+            <h3 style="margin-top: 0;">Professional Certifications:</h3>
+            <ul>
+                <li>Certified HeartMath Interventions Practitioner</li>
+                <li>PSYCH-K® Master Facilitator</li>
+                <li>Certified Health Coach (ACE)</li>
+                <li>Advanced Mindfulness-Based Stress Relief Practitioner</li>
+                <li>NLP Practitioner</li>
+                <li>Completed Psychoacoustic Training with Dr. Jeffrey Thompson</li>
+            </ul>
+        </div>
+        
+        <p><strong>Vonka</strong> is a PSYCH-K® Master Facilitator specializing in subconscious belief reprogramming and emotional pattern transformation. Her work complements Sonic Balance by addressing the psychological patterns that often accompany physiological stress.</p>
+        
+        <p>Together, they offer integrated mind-body healing protocols for clients seeking comprehensive transformation.</p>
+        
+        <p style="font-style: italic; margin-top: 2rem; padding: 1rem; background: white; border-radius: 5px;">"We've walked the healing path ourselves. We understand what it's like to feel stuck in chronic stress patterns. And we know the way forward."</p>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing">
+        <h2>Pricing & Packages</h2>
+        
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Single Session</h3>
+                <div class="price">$150</div>
+                <p class="price-detail">60-90 minutes</p>
+                <p>Includes full HRV assessment, frequency identification, personalized treatment, and detailed session report.</p>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Intro Package</h3>
+                <div class="price">$400</div>
+                <p class="price-detail">3 Sessions | Save $50</p>
+                <p>Ideal for those new to neuroacoustic therapy. Allows time for initial nervous system recalibration.</p>
+            </div>
+            
+            <div class="pricing-card featured">
+                <h3>Healing Protocol</h3>
+                <div class="price">$750</div>
+                <p class="price-detail">6 Sessions | Save $150</p>
+                <p><strong>Most Popular</strong><br>Provides the consistency needed for lasting autonomic nervous system shifts.</p>
+            </div>
+            
+            <div class="pricing-card">
+                <h3>Transformation Series</h3>
+                <div class="price">$1,200</div>
+                <p class="price-detail">10 Sessions | Save $300</p>
+                <p>Comprehensive protocol for deep nervous system repatterning and long-term stress resilience.</p>
+            </div>
+        </div>
+        
+        <div class="financial-assistance">
+            <p><strong>Financial Assistance Available</strong></p>
+            <p>We believe healing should be accessible to everyone. Limited sliding-scale spots are available for those experiencing financial hardship. Please inquire during booking.</p>
+        </div>
+    </section>
+
+    <!-- What to Expect -->
+    <section class="bg-light">
+        <h2>What to Expect - Your First Session</h2>
+        
+        <h3>Before You Arrive</h3>
+        <p>You'll receive intake forms and a brief questionnaire about your health history, current stress patterns, and healing goals.</p>
+        
+        <h3>Session Overview (90 minutes)</h3>
+        <ul style="margin-left: 2rem;">
+            <li><strong>Consultation (15 min):</strong> We discuss your health concerns and what brought you to Sonic Balance</li>
+            <li><strong>Baseline HRV Assessment (10 min):</strong> You'll wear a comfortable chest strap heart monitor while we establish your nervous system baseline</li>
+            <li><strong>Frequency Discovery (30 min):</strong> You lie comfortably on our treatment table while we systematically test therapeutic frequencies and monitor your real-time physiological response</li>
+            <li><strong>Personalized Treatment (30 min):</strong> Once we identify your homeostasis frequency, you'll receive therapeutic sound and vibration at that specific frequency</li>
+            <li><strong>Integration (5 min):</strong> We review your session data, discuss what we observed, and answer questions</li>
+        </ul>
+        
+        <h3>After Your Session</h3>
+        <p>You'll receive a detailed PDF report showing your autonomic nervous system patterns, identified frequencies, and personalized recommendations. Most clients report feeling deeply relaxed, with effects that deepen over the following 24-48 hours.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">What does a session feel like?</div>
+            <p>Most clients describe Sonic Balance as deeply relaxing—similar to meditation but more profound. You'll feel gentle vibration through the treatment table while listening to therapeutic soundscapes. Many people enter a state between waking and sleeping, which is ideal for nervous system reset.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How is this different from regular massage or meditation?</div>
+            <p>Unlike massage, which works on muscles, or meditation, which requires mental effort, Sonic Balance directly influences your autonomic nervous system through precise vibroacoustic stimulation. We're addressing the physiological patterns that keep you stuck in stress responses, not just the symptoms.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How many sessions will I need?</div>
+            <p>Most clients notice shifts within 1-3 sessions, but lasting nervous system repatterning typically requires 6-10 sessions. We'll assess your progress and make recommendations based on your individual response.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Is this safe? Are there any side effects?</div>
+            <p>Sonic Balance is non-invasive and generally very safe. The most common "side effect" is deep relaxation that may last several hours. We do not recommend sessions for those with pacemakers, active psychosis, or in the first trimester of pregnancy. Please disclose all health conditions during intake.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do you accept insurance?</div>
+            <p>We do not currently accept insurance, but we can provide detailed receipts for HSA/FSA reimbursement or out-of-network claims. Many clients find their insurance will cover a portion when submitted with proper documentation.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What should I wear?</div>
+            <p>Comfortable, loose-fitting clothing. You'll be lying down for most of the session. Remove shoes, jewelry, and anything restrictive around the chest (for the heart monitor).</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="bg-light">
+        <h2>Book Your Session</h2>
+        <p style="text-align: center; margin-bottom: 2rem;">Ready to experience personalized neuroacoustic therapy? Contact us to schedule your discovery session.</p>
+        
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mvgybqve" method="POST">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required placeholder="Tell us about what brought you to Sonic Balance..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+        
+        <p style="text-align: center; margin-top: 2rem; font-style: italic;">Currently accepting new clients in Yardley, PA<br>Convenient to New Hope, Lambertville, Princeton, Bucks, Hunterdon & Mercer Counties</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Sonic Balance Therapy</strong></p>
+        <p>Yardley, PA | Serving New Hope, Lambertville, Princeton, Bucks, Hunterdon & Mercer Counties</p>
+        <p style="margin-top: 1rem; font-size: 0.9rem;">© 2025 Sonic Balance. All rights reserved.</p>
+    </footer>
+</body>
+</html>
